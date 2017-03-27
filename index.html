@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Visitas</title>
+    <style> /*abri la etiqueta style para dar formato a mis textos, llamandolos desde la etiqueta en la que se encuentran*/
+      h2{ /*aqui le doy formato al texto de h2*/
+        font-size: 30px;
+        color: #DC442F; /* color rojito*/
+      }
+      h3{
+        color: #1C4AE5; /*color azul electrico*/
+      }
+      h4{
+        color: white;
+        background-color: #1C4AE5; /*sirve para darle color de fondo a una etiqueta de tipo h1, h2...*/
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><strong>Articulos</strong></h1>
+    <h2>Hola mundo</h2>
+    <hr/> <!--etiqueta para crear una linea horizontal -->
+    <h3>Nueva historia</h3>
+    <hr/>
+    <h4 align = "right">JAJAJAJAJAJAJAJAJA</h4>
+    <hr/>
+    <p><strong>Crear artículo</strong></p>
+    <tr>
+      <td>
+        <input type = "button" id = "Texto Grande" value = "Texto Grande" onclick="textoGrande();"/>
+        <input type = "button" id = "Texto Mediano" value = "Texto Mediano"/>
+        <input type = "button" id = "Texto Chico" value = "Texto Chico"/>
+        <input type = "button" id = "Color de Texto" value = "Color de Texto"/>
+        <input type = "button" id = "Color de Fondo" value = "Color de Fondo"/>
+        <input type = "button" id = "Alinear Izquierda" value = "Alinear Izquierda"/>
+        <input type = "button" id = "Centrar" value = "Centrar" onclick="centrar();"/>
+        <input type = "button" id = "Alinear Derecha" value = "Alinear Derecha"/>
+        <!--<input type = "button" id = "Borrar" value = "Borrar comentario"/>-->
+        <input type = "button" id = "Imagen" value = "Agregar Imagen"/>
+      </td>
+    </tr>
+    </br> <!--Afregue este salto de linea porque el area de texto me salia justo a un lado del ultimo input-->
+    <textarea type = "text" name = "comentario" rows="8" cols = "100" id = "comentario" onkeyup="mostrarComentario();" placeholder="Escribe aqui tu comentario"></textarea><!--el placeholder es para que aparezca la idicacion deseada dentro del texta area y no se tenga que borrar el texto para agragar un comentario.....onkeyup me sirvio para que al momento de escribir el texto en text area mostraba el texto abajo con la llamada de la función-->
+    <hr/>
+    <p><strong>Contenido</strong></p>
+    <!--<textarea class= "nobord" rows="10" cols = "100"></textarea>-->
+    <p id = "comentario visualizado"></p>
+    </br>
+    </br>
+    </br>
+    <button type="submit" id = "Enviar">Enviar</button>
+    <input type="reset" id = "Borrar" value="Borrar" onclick="borrar();"/>
+    <script src = "Assets/js/visitas.js"></script>
+
+  </body>
+</html>
